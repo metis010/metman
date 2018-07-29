@@ -10,11 +10,7 @@
 	<packaging>pom</packaging>
 	<name>apps</name>
 
-	<dependencies>
-		<dependency>
-			<groupId>pl.met.spring-parent</groupId>
-			<artifactId>springboot-parent</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>metman-app</module>
+	</modules>
 </project>
