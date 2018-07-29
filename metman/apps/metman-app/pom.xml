@@ -10,4 +10,11 @@
 	<artifactId>metman-app</artifactId>
 	<name>metman-app</name>
 
+	<dependencies>
+		<dependency>
+			<groupId>pl.metman.modules.authorization.authorization-logic</groupId>
+			<artifactId>authorization-logic</artifactId>
+			<version>0.0.1.DEV</version>
+		</dependency>
+	</dependencies>
 </project>

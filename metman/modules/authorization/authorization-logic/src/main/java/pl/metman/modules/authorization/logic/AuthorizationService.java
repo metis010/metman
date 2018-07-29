@@ -1,6 +1,7 @@
 package pl.metman.modules.authorization.logic;
 
+public interface AuthorizationService {
 
-public class AuthorizationService {
+	String hellow(String guest);
 
 }
