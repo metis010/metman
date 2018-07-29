@@ -12,6 +12,6 @@
 	<packaging>pom</packaging>
 	<name>metman</name>
 	<modules>
-		<module>appclient</module>
+		<module>modules</module>
 	</modules>
 </project>
