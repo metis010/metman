@@ -3,25 +3,84 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.metman</groupId>
 	<artifactId>metman</artifactId>
-	<version>0.0.1.DEV</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>metman</name>
+
+	<developers>
+		<developer>
+			<id>metis</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<metman.version>0.0.1-SNAPSHOT</metman.version>
+		<spring.version>2.0.3.RELEASE</spring.version>
+		<junit.version>4.12</junit.version>
+	</properties>
+
 	<modules>
 		<module>modules</module>
 		<module>apps</module>
+		<module>external-deps</module>
 	</modules>
+
 	<dependencyManagement>
-  	<dependencies>
-  		<dependency>
-  			<groupId>pl.metman.modules.authorization.authorization-logic</groupId>
-			<artifactId>authorization-logic</artifactId>
-			<version>0.0.1.DEV</version>
-  		</dependency>
-  		<dependency>
-  			<groupId>pl.metman.modules.authorization.authorization-shared</groupId>
-			<artifactId>authorization-shared</artifactId>
-			<version>0.0.1.DEV</version>
-  		</dependency>
-  	</dependencies>
-  </dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>pl.metman.modules.authorization.authorization-logic</groupId>
+				<artifactId>authorization-logic</artifactId>
+				<version>${metman.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>pl.metman.modules.authorization.authorization-shared</groupId>
+				<artifactId>authorization-shared</artifactId>
+				<version>${metman.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>pl.metman.apps.metman-app</groupId>
+				<artifactId>metman-app</artifactId>
+				<version>${metman.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>pl.metman.external-deps.spring-server-deps</groupId>
+				<artifactId>spring-server-deps</artifactId>
+				<type>pom</type>
+				<version>${metman.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>pl.metman.external-deps.spring-boot-app-deps</groupId>
+				<artifactId>spring-boot-app-deps</artifactId>
+				<type>pom</type>
+				<version>${metman.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>pl.metman.external-deps.test-deps</groupId>
+				<artifactId>test-deps</artifactId>
+				<version>${metman.version}</version>
+				<type>pom</type>
+			</dependency>
+			<!-- extends libs -->
+
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- JUnit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

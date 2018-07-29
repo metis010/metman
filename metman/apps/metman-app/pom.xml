@@ -1,20 +1,27 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
-		<groupId>pl.met.spring-parent</groupId>
-		<artifactId>springboot-parent</artifactId>
-		<version>0.0.1</version>
+		<groupId>pl.metman.apps</groupId>
+		<artifactId>apps</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<groupId>pl.metman.apps.metman-app</groupId>
 	<artifactId>metman-app</artifactId>
 	<name>metman-app</name>
+
+	<developers>
+		<developer>
+			<id>metis</id>
+		</developer>
+	</developers>
 
 	<dependencies>
 		<dependency>
 			<groupId>pl.metman.modules.authorization.authorization-logic</groupId>
 			<artifactId>authorization-logic</artifactId>
-			<version>0.0.1.DEV</version>
 		</dependency>
 	</dependencies>
 </project>

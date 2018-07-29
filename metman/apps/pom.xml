@@ -1,16 +1,48 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>pl.metman</groupId>
 		<artifactId>metman</artifactId>
-		<version>0.0.1.DEV</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<groupId>pl.metman.apps</groupId>
 	<artifactId>apps</artifactId>
 	<packaging>pom</packaging>
 	<name>apps</name>
 
+	<developers>
+		<developer>
+			<id>metis</id>
+		</developer>
+	</developers>
+
 	<modules>
 		<module>metman-app</module>
 	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>pl.metman.external-deps.spring-boot-app-deps</groupId>
+			<artifactId>spring-boot-app-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
