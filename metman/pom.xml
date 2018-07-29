@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>pl.met.spring-parent</groupId>
-		<artifactId>springboot-parent</artifactId>
-		<version>0.0.1</version>
-	</parent>
 	<groupId>pl.metman</groupId>
 	<artifactId>metman</artifactId>
 	<version>0.0.1.DEV</version>
@@ -13,5 +8,20 @@
 	<name>metman</name>
 	<modules>
 		<module>modules</module>
+		<module>apps</module>
 	</modules>
+	<dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>pl.metman.modules.authorization.authorization-logic</groupId>
+			<artifactId>authorization-logic</artifactId>
+			<version>0.0.1.DEV</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>pl.metman.modules.authorization.authorization-shared</groupId>
+			<artifactId>authorization-shared</artifactId>
+			<version>0.0.1.DEV</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
