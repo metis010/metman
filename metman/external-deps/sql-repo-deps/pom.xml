@@ -7,21 +7,20 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>pl.metman.external-deps.spring-server-deps</groupId>
-	<artifactId>spring-server-deps</artifactId>
+	<groupId>pl.metman.external-deps.sql-repo-deps</groupId>
+	<artifactId>sql-repo-deps</artifactId>
 	<packaging>pom</packaging>
-	<name>spring-server-deps</name>
-
-	<developers>
-		<developer>
-			<id>metis</id>
-		</developer>
-	</developers>
+	<name>sql-repo-deps</name>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 	</dependencies>
 </project>

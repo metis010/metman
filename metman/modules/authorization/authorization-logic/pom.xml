@@ -29,5 +29,9 @@
 			<groupId>pl.metman.modules.authorization.authorization-shared</groupId>
 			<artifactId>authorization-shared</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>pl.metman.modules.authorization.authorization-repo</groupId>
+			<artifactId>authorization-repo</artifactId>
+		</dependency>	
 	</dependencies>
 </project>

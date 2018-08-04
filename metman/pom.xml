@@ -21,6 +21,7 @@
 		<metman.version>0.0.1-SNAPSHOT</metman.version>
 		<spring.version>2.0.3.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
+		<postgres.version>9.1-901-1.jdbc4</postgres.version>
 	</properties>
 
 	<modules>
@@ -42,10 +43,17 @@
 				<version>${metman.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>pl.metman.modules.authorization.authorization-repo</groupId>
+				<artifactId>authorization-repo</artifactId>
+				<version>${metman.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>pl.metman.apps.metman-app</groupId>
 				<artifactId>metman-app</artifactId>
 				<version>${metman.version}</version>
 			</dependency>
+
+			<!-- external libs -->
 			<dependency>
 				<groupId>pl.metman.external-deps.spring-server-deps</groupId>
 				<artifactId>spring-server-deps</artifactId>
@@ -59,12 +67,17 @@
 				<version>${metman.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>pl.metman.external-deps.test-deps</groupId>
-				<artifactId>test-deps</artifactId>
+				<groupId>pl.metman.external-deps.common-deps</groupId>
+				<artifactId>common-deps</artifactId>
 				<version>${metman.version}</version>
 				<type>pom</type>
 			</dependency>
-			<!-- extends libs -->
+			<dependency>
+				<groupId>pl.metman.external-deps.sql-repo-deps</groupId>
+				<artifactId>sql-repo-deps</artifactId>
+				<version>${metman.version}</version>
+				<type>pom</type>
+			</dependency>
 
 			<!-- Spring -->
 			<dependency>
@@ -80,6 +93,12 @@
 				<artifactId>junit</artifactId>
 				<version>${junit.version}</version>
 				<scope>test</scope>
+			</dependency>
+			<!-- PostgreSQL -->
+			<dependency>
+				<groupId>postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${postgres.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

@@ -22,5 +22,6 @@
 	<modules>
 		<module>authorization-logic</module>
 		<module>authorization-shared</module>
-	</modules>
+    <module>authorization-repo</module>
+  </modules>
 </project>

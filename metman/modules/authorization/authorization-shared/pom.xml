@@ -19,10 +19,5 @@
 	</developers>
 
 	<dependencies>
-		<dependency>
-			<groupId>pl.metman.external-deps.test-deps</groupId>
-			<artifactId>test-deps</artifactId>
-			<type>pom</type>
-		</dependency>
 	</dependencies>
 </project>
